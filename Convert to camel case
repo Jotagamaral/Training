@@ -1,0 +1,14 @@
+function toCamelCase(str){
+    arr = str.split(/[-\s_]+/)
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = (i == 0) ? arr[i] : arr[i].charAt(0).toUpperCase() + arr[i].slice(1)   
+    }
+    return arr.join('')
+
+}
+
+
+console.log(toCamelCase(''),'')
+console.log(toCamelCase("the_stealth_warrior"), "theStealthWarrior")
+console.log(toCamelCase("The-Stealth-Warrior"), "TheStealthWarrior")
+console.log(toCamelCase("A-B-C"), "ABC")
