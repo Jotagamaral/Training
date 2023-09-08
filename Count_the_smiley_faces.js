@@ -16,7 +16,8 @@ function countSmileys(arr) {
     arr.forEach(element => {     
         if (element.length == 2 && (element.includes(':') || element.includes(';')) && (element.includes(')') || element.includes('D'))) {
             count++  
-        } else if (element.length == 3 && (element.includes(':') || element.includes(';')) && (element.includes('-') || element.includes('~')) && (element.includes(')') || element.includes('D'))) {
+        } else if (element.length == 3 && (element.includes(':') || element.includes(';')) && (element.includes('-') || 
+                   element.includes('~')) && (element.includes(')') || element.includes('D'))) {
             count++
         }      
     });
