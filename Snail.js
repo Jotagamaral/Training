@@ -18,11 +18,55 @@
 //NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array [[]].
 
 
-
 snail = function(array) {
+    n = array
+    r = []
+    function forward (n) {
+       n[0].forEach(element => {
+            r.push(element)
+        });
+        array.shift()  
+    }
+    function jumping_forward (n) {
+        for (let i = 0; i < array.length - 1; i++) {
+            r.push(n[i][array.length])
+            array[i].pop()
+        }
+    }
+    function backwards(n) {
+        n[array.length -1].reverse().forEach(element => {
+            r.push(element)
+        });
+        array.pop()
+    }
+    function jumping_backwards(n) {
+        for (let i = array.length -1; i > 0; i--) {
+            r.push(n[i][0])
+            array[i].shift()  
+        }  
+    }
 
+    while (true) {
+             
+        if (n.length != 0) {
+                 forward(n)
+            
+        } else {
+            break
+        }
 
-    
+        jumping_forward(n) 
+             
+        if (n.length != 0) {
+                  backwards(n)
+
+        } else {
+            break
+        }
+
+        jumping_backwards(n)        
+    }
+    return r
   }
 
 
