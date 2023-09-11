@@ -27,7 +27,6 @@ function pickPeaks(arr){
                 j++
             }
         }
-        
     }
     return ({pos: pos, peaks: peaks})
   }
