@@ -18,5 +18,4 @@ var kidsWithCandies = function(candies, extraCandies) {
     }
     return candies  
 };
-
 console.log(kidsWithCandies([12,1,12], 10))
