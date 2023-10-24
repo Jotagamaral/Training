@@ -8,9 +8,7 @@ function toCamelCase(str){
         arr[i] = (i == 0) ? arr[i] : arr[i].charAt(0).toUpperCase() + arr[i].slice(1)   
     }
     return arr.join('')
-
 }
-
 
 console.log(toCamelCase(''),'')
 console.log(toCamelCase("the_stealth_warrior"), "theStealthWarrior")
