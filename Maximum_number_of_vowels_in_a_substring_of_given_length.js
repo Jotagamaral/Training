@@ -22,3 +22,7 @@ var maxVowels = function(s, k) {
     }
     return result
 };
+
+console.log(mexVowels("abciiidef", 3))
+console.log(mexVowels("aeiou", 2))
+console.log(mexVowels("leetcode", 3))
