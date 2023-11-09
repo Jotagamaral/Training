@@ -12,7 +12,6 @@ var isPP = function(n){
       m = n ** (1/k)
       l = [m, k]
     }
-    
   }
   return l || null
 }
