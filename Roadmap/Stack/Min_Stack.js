@@ -29,6 +29,7 @@
 // minStack.top();    // return 0
 // minStack.getMin(); // return -2
 
+//* Solution : Stack | Time complexity: O(1) | Memory: O(n)
 
 var MinStack = function() {
     this.stack = []
